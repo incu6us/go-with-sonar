@@ -10,7 +10,7 @@ ENV GOPROXY=direct
 ENV GOPATH=/tmp/.gvm/pkgsets/go${GOLANG_VERSION}/global
 ENV GOROOT=/tmp/.gvm/gos/go${GOLANG_VERSION}
 
-RUN apk add binutils bison gcc
+RUN apk add --no-cache binutils bison gcc
 RUN curl -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer -o gvm-installer.sh
 RUN chmod +x gvm-installer.sh
 RUN ./gvm-installer.sh

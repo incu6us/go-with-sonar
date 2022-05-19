@@ -67,7 +67,7 @@ jobs:
           context: .
           push: ${{ github.event_name != 'pull_request' }}
           # tags: ${{ steps.meta.outputs.tags }}
-          tags: ${{ github.repository }}:${{ github.ref_name }}
+          tags: ${{ github.repository }}:${{ github.ref_name }},${{ github.repository }}:latest
           labels: ${{ steps.meta.outputs.labels }}
           build-args: GOLANG_VERSION=${{ github.ref_name }}
 
